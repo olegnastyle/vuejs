@@ -4,8 +4,13 @@
 ````
 cd client
 ````
+
 Раворачиваем проект:
-Команда: npm install
+````
+npm install
+````
 
 Запускаем проект:
-Команда: npm run dev
+````
+npm run dev
+````
