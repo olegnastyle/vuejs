@@ -1,7 +1,7 @@
 <template>
     <header>
-        <h1>Полезные свойства капусты</h1>
-        <nav :class="classObject">
+        <h1 v-if="asHead">Полезные свойства капусты</h1>
+        <nav :style="styleObject">
             <button @click="asNavFunc">
                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.1" clip-path="url(#clip0_1_659)">
@@ -27,19 +27,24 @@
     </header>
 </template>
 
-<script>
-    import { ref, reactive } from "vue";
+<script setup>
+    import { reactive, ref } from "vue";
 
-    const asNav = ref('.nav_disable')
-
-    const classObject = reactive({
-        active: true
-    })
-
-
-    function asNavFunc() {
-        classObject.active = !classObject.active
+    // состояние заголовка H1
+    const asHead = ref(true)
+    // при нажатии меняем стили <nav>
+    const asNavFunc = () => {
+        styleObject.transform = styleObject.transform === 'translate(320px, 0)' ? 'translate(50%, 0)' : 'translate(320px, 0)'
+        styleObject.right = styleObject.right === '0' ? '50%' : '0'
+        asHead.value = !asHead.value
     }
+    // стили навигации <nav>
+    const styleObject = reactive({
+        position: 'absolute',
+        right: '0',
+        transition: 'all .4s linear',
+        transform: 'translate(320px, 0)',
+    });
 </script>
 
 <style scoped>
@@ -58,17 +63,7 @@
         font-size: 32px;
     }
 
-    .nav_active {
-        right: 0;
-    }
-
-    .nav_disable {
-        right: -300px;
-    }
-
     nav {
-        position: absolute;
-        
         padding: 7px 30px;
 
         display: flex;
