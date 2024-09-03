@@ -1,11 +1,13 @@
 <template>
-  <Header />
+  <homeHeader />
+  <homeMain />
 </template>
 
 <script setup>
-  import Header from "./components/Header.vue";
+  import homeHeader from './components/home-header.vue';
+  import homeMain from './components/home-main.vue';
 </script>
 
 <style scoped>
-  
+
 </style>
