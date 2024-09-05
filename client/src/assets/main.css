@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-html,body, #app {
+html,body {
     width: 100%;
     height: 100%;
 }
@@ -17,6 +17,7 @@ html,body, #app {
     background-color: #FECFB0;
     width: 1024px;
     margin: 0 auto;
+    height: 100vh;
 }
 
 button {

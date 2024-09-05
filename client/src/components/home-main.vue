@@ -5,11 +5,17 @@
             <p>Капуста давно и прочно вошла в рацион нашего питания и принадлежит к числу важнейших овощных растений. Она также является неотъемлемой частью таких традиционных блюд, как: борщ, щи, солянка, тушеная капуста, голубцы, капустная запеканка и конечно квашеная капуста.</p>
             <p>Капуста не только популярный, но и полезный продукт: она богата витаминами А, В1, Р, К, В6, U. Капуста является лидером среди овощей по содержанию витамина С, причем он сохраняется в капусте как при длительном хранении в сыром виде, так и при термической обработке. В ней также много минералов - сера, кальций, калий и фосфор, клетчатки и воды.</p>
         </article>
-        <div>
-            <button><img src="" alt=""></button>
-        </div>
+        <section>
+            <button class="like" @click="likeCount++"><img src="../assets/img/like.svg"><span>{{ likeCount }}</span></button>
+        </section>
     </main>
 </template>
+
+<script setup>
+    import { ref } from 'vue'
+
+    const likeCount = ref(0);
+</script>
 
 <style scoped>
     main {
@@ -34,7 +40,7 @@
         text-align: left;
     }
 
-    .img {
+    article .img {
         grid-area: 1 / 1 / 2 / 2;
     }
 
@@ -47,9 +53,17 @@
         text-indent: 40px;
     }
 
-    img {
+    article img {
         width: 480px;
         height: 320px;
         border-radius: 40px;
+    }
+
+    .like {
+        display: flex;
+        float: right;
+        gap: 10px;
+        font-size: 28px;
+        color: #E5847B;
     }
 </style>

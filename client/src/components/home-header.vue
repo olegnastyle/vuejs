@@ -18,10 +18,10 @@
                 </svg>
             </button>
             <ul>
-                <li><button>Главная</button></li>
-                <li><button>Блог</button></li>
-                <li><button>О нас</button></li>
-                <li><button>Контакты</button></li>
+                <li><a href="#/home">Главная</a></li>
+                <li><a href="#/blog">Блог</a></li>
+                <li><a href="#/about">О нас</a></li>
+                <li><a href="#/contact">Контакты</a></li>
             </ul>
         </nav>
     </header>
