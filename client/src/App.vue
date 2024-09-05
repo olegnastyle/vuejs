@@ -1,11 +1,13 @@
 <template>
   <homeHeader />
   <component :is="currentView" />
+  <homeFooter />
 </template>
 
 <script setup>
   import { ref, computed } from 'vue'
   import homeHeader from './components/home-header.vue';
+  import homeFooter from './components/home-footer.vue';
   import homeMain from './components/home-main.vue';
   import myBlog from './components/my-blog.vue';
   import homeAbout from './components/home-about.vue';

@@ -85,13 +85,13 @@
         
     }
 
-    button {
+    button, a {
         cursor: pointer;
         color: #E5847B;
-        font-size: 15px;
+        font-size: 18px;
     }
 
-    button:hover {
+    button:hover, a:hover {
         color: #FECFB0;
     }
 </style>
